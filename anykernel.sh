@@ -51,3 +51,9 @@ else
     write_boot # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 fi
 ## end boot install
+
+setenforce 0
+
+pm install $AKHOME/KernelSU_Next.apk
+
+/data/adb/ksud module install $AKHOME/ksu_module_susfs_1.5.2+.zip
