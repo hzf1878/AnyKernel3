@@ -23,3 +23,5 @@ SUSFS_REPO=$(git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='
 wget https://github.com/sidex15/susfs4ksu-module/releases/download/"$SUSFS_REPO"/ksu_module_susfs_1.5.2+.zip
 
 rm -rf ./next
+
+rm -rf ksu.sh
