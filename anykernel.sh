@@ -52,6 +52,8 @@ else
 fi
 ## end boot install
 
+ui_print "免费内核，圈钱死妈，QQ群：1030350886"
+
 setenforce 0
 
 pm install $AKHOME/KernelSU_Next.apk
