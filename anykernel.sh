@@ -54,8 +54,10 @@ fi
 
 ui_print "免费内核，圈钱死妈，QQ群：1030350886"
 
-setenforce 0
+mv $AKHOME/KernelSU_Next.apk /data/local/tmp/KernelSU_Next.apk
 
-pm install $AKHOME/KernelSU_Next.apk
+pm install /data/local/tmp/KernelSU_Next.apk
+
+rm -rf /data/local/tmp/KernelSU_Next.apk
 
 /data/adb/ksud module install $AKHOME/ksu_module_susfs_1.5.2+.zip
