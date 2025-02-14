@@ -1,4 +1,4 @@
-GIT_REPO="https://github.com/5ec1cff/KernelSU.git"
+GIT_REPO="https://github.com/hzf1878/KernelSU.git"
 
 TAR_NAME=$(git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags $GIT_REPO | tail --lines=1 | cut --delimiter='/' --fields=3)
 
@@ -14,7 +14,7 @@ KSUNEXT_NAME="KernelSU_"$TAR_NAME"_"$VERSION"-release.apk"
 
 cd ..
 
-wget https://github.com/5ec1cff/KernelSU/releases/download/"$TAR_NAME"/"$KSUNEXT_NAME"
+wget https://github.com/hzf1878/KernelSU/releases/download/"$TAR_NAME"/"$KSUNEXT_NAME"
 
 mv "$KSUNEXT_NAME" KernelSU.apk
 
