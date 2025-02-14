@@ -1,4 +1,4 @@
-GIT_REPO="https://github.com/rifsxd/KernelSU-Next.git"
+GIT_REPO="https://github.com/5ec1cff/KernelSU.git"
 
 TAR_NAME=$(git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags $GIT_REPO | tail --lines=1 | cut --delimiter='/' --fields=3)
 
@@ -10,13 +10,13 @@ COMMIT_COUNT=$(git rev-list --count HEAD)
 
 VERSION=$(echo $((1 * 10000 + "$COMMIT_COUNT" + 200)))
 
-KSUNEXT_NAME="KernelSU_Next_"$TAR_NAME"_"$VERSION"-release.apk"
+KSUNEXT_NAME="KernelSU_"$TAR_NAME"_"$VERSION"-release.apk"
 
 cd ..
 
-wget https://github.com/rifsxd/KernelSU-Next/releases/download/"$TAR_NAME"/"$KSUNEXT_NAME"
+wget https://github.com/5ec1cff/KernelSU/releases/download/"$TAR_NAME"/"$KSUNEXT_NAME"
 
-mv "$KSUNEXT_NAME" KernelSU_Next.apk
+mv "$KSUNEXT_NAME" KernelSU.apk
 
 SUSFS_REPO=$(git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/sidex15/susfs4ksu-module.git | tail --lines=1 | cut --delimiter='/' --fields=3)
 
